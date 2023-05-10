@@ -60,9 +60,15 @@ const Navbar = () => {
                 <>
                     <hr />
                     <div className="menu">
-                        <span>Test1</span>
-                        <span>Test1</span>
-                        <span>Test1</span>
+                        <span>Graphics & Design</span>
+                        <span>Video & Animation</span>
+                        <span>Writing & Translation</span>
+                        <span>AI Services</span>
+                        <span>Digital Marketing</span>
+                        <span> Music & Audio</span>
+                        <span>Programing & Tech</span>
+                        <span>Business</span>
+                        <span>Lifestyle</span>
 
                     </div>
                 </>

@@ -2,6 +2,36 @@
     background-color: rgb(220, 230, 227);
     height: 500px;
 
+    &.dark {
+        background-color: rgb(36, 23, 78);
+        height: 500px;
+        color: rgb(249, 235, 235);
+
+        .container {
+            .item-left {
+                padding: 20px 0px;
+
+                p {
+                    color: rgb(249, 235, 235);
+                }
+
+                button {
+                    margin: 15px 0px;
+                    padding: 5px;
+                    width: 200px;
+                    height: 40px;
+                    background-color: #1dbf73;
+                    border: none;
+                    color: rgb(228, 245, 228);
+                    font-size: 15px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
     .container {
         width: 80%;
         display: flex;
@@ -47,6 +77,63 @@
                 height: 100%;
                 width: 100%;
                 object-fit: contain;
+            }
+        }
+    }
+}
+
+.explore {
+    background-color: rgb(249, 253, 252);
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+
+    .container {
+        width: 80%;
+        display: flex;
+        margin: 0 10%;
+        flex-direction: column;
+
+        .items {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .item {
+                width: 20%;
+                height: 150px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                cursor: pointer;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    object-fit: contain;
+                }
+
+                .line {
+                    width: 50px;
+                    height: 2px;
+                    background-color: lightgray;
+                    transition: all .3s ease;
+                }
+
+                span {
+                    font-weight: 300;
+                }
+
+                &:hover {
+                    .line {
+                        width: 80px;
+                        background-color: #1dbf73;
+                    }
+                }
             }
         }
     }
