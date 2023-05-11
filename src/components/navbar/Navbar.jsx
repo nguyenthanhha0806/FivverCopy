@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Navbar.scss'
 import avartar from '../../../public/images/avartar.jpg'
+import { useLocation } from 'react-router-dom'
 const Navbar = () => {
     const [active, setActive] = useState(false)
     const [open, setOpen] = useState(false)
@@ -10,6 +11,7 @@ const Navbar = () => {
     const handleOpen = () => {
         setOpen(!open)
     }
+    const { pathname } = useLocation();
     useEffect(() => {
 
         window.addEventListener('scroll', isActive)
@@ -23,7 +25,7 @@ const Navbar = () => {
         isSeller: true,
     };
     return (
-        <div className={active ? 'navbar active' : 'navbar'}>
+        <div className={active || pathname !== '/' ? 'navbar active' : 'navbar'}>
             <div className='container'>
                 <div className='logo'>
                     <span className='text'>fiverr</span>
@@ -56,7 +58,7 @@ const Navbar = () => {
 
             </div>
             {
-                active &&
+                (active || pathname !== '/') &&
                 <>
                     <hr />
                     <div className="menu">
@@ -69,8 +71,8 @@ const Navbar = () => {
                         <span>Programing & Tech</span>
                         <span>Business</span>
                         <span>Lifestyle</span>
-
                     </div>
+                    <hr />
                 </>
             }
         </div>
